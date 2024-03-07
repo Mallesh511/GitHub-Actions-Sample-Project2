@@ -1,8 +1,8 @@
 name: Apply Staging
 on:
-  push:
-#  release:
-#    types: [published]
+#  push:
+  release:
+    types: [published]
 defaults:
   run:
     shell: bash
