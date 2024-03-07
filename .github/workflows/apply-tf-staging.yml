@@ -1,8 +1,8 @@
 name: Apply Staging
 on:
-#  push:
-  release:
-    types: [published]
+  push:
+#  release:
+#    types: [published]
 defaults:
   run:
     shell: bash
@@ -34,3 +34,7 @@ jobs:
       - name: Terraform Apply
         id: apply
         run: terraform apply --auto-approve
+
+      - name: Terraform Destroy
+        id: destroy
+        run: terraform destroy --auto-approve
